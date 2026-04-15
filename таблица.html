@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+    <title>Сравнительная таблица полимеров · Фармацевтическая упаковка</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #d4e0d0;
+            font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif;
+            padding: 8px;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .table-container {
+            max-width: 100%;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            padding: 8px 6px 6px 6px;
+            margin: 0 auto;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 7.2pt;
+            line-height: 1.2;
+            word-wrap: break-word;
+            min-width: 1200px;
+        }
+
+        colgroup col:nth-child(1) { width: 8.5%; }
+        colgroup col:nth-child(2) { width: 7%; }
+        colgroup col:nth-child(3) { width: 7%; }
+        colgroup col:nth-child(4) { width: 7%; }
+        colgroup col:nth-child(5) { width: 10%; }
+        colgroup col:nth-child(6) { width: 10%; }
+        colgroup col:nth-child(7) { width: 9.5%; }
+        colgroup col:nth-child(8) { width: 8%; }
+        colgroup col:nth-child(9) { width: 33%; }
+
+        th, td {
+            border: 0.5px solid #a5c9a0;
+            padding: 4px 3px;
+            vertical-align: top;
+        }
+
+        th {
+            background: #2e7d32;
+            color: white;
+            font-weight: 600;
+            font-size: 7pt;
+            text-align: center;
+            letter-spacing: 0.1px;
+            border-bottom: 2px solid #1b5e20;
+            padding: 5px 3px;
+        }
+
+        .cat-traditional {
+            background: #e8f5e9;
+            font-weight: 700;
+            color: #1b5e20;
+        }
+
+        .cat-prospective {
+            background: #f1f8e9;
+            font-weight: 700;
+            color: #1b5e20;
+        }
+
+        .subcat {
+            background: #f4f9f2;
+            font-weight: 650;
+            color: #2e7d32;
+        }
+
+        td {
+            color: #1f2e1f;
+        }
+
+        .warning {
+            color: #c62828;
+            font-weight: 600;
+        }
+
+        .note-small {
+            font-size: 6.5pt;
+            color: #3a5c3a;
+        }
+
+        .bad-text {
+            color: #b71c1c;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .accent-green {
+            color: #1b5e20;
+        }
+
+        .footnote {
+            margin-top: 6px;
+            font-size: 6pt;
+            color: #4a6e4a;
+            text-align: right;
+            border-top: 0.5px solid #b0c9ab;
+            padding-top: 4px;
+        }
+
+        /* МОБИЛЬНАЯ АДАПТАЦИЯ */
+        @media screen and (max-width: 1200px) {
+            body {
+                padding: 4px;
+                background: #f4f9f2;
+            }
+            .table-container {
+                padding: 4px;
+                border-radius: 2px;
+            }
+            table {
+                font-size: 8pt;
+                min-width: 1100px;
+            }
+            th {
+                font-size: 7.5pt;
+            }
+            .note-small {
+                font-size: 7pt;
+            }
+            .footnote {
+                font-size: 7pt;
+            }
+        }
+
+        /* ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ */
+        @media screen and (max-width: 600px) {
+            table {
+                font-size: 9pt;
+            }
+            th {
+                font-size: 8pt;
+            }
+        }
+
+        /* ПЕЧАТЬ — А4 АЛЬБОМ */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+            .table-container {
+                box-shadow: none;
+                border-radius: 0;
+                padding: 0.3cm;
+                overflow-x: visible;
+            }
+            table {
+                min-width: 100%;
+                font-size: 7.2pt;
+            }
+            @page {
+                size: A4 landscape;
+                margin: 0.5cm;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="table-container">
+    <table>
+        <colgroup>
+            <col><col><col><col><col><col><col><col><col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Полимер</th>
+                <th>Барьер O₂</th>
+                <th>Барьер H₂O</th>
+                <th>Прозрач-<br>ность</th>
+                <th>Темп. диапазон, °C</th>
+                <th>Хим. стойкость</th>
+                <th>Стерилизация</th>
+                <th>Стоимость</th>
+                <th>Ограничения / Примечания</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="cat-traditional">
+                <td colspan="9">1. ТРАДИЦИОННЫЕ ПОЛИМЕРЫ</td>
+            </tr>
+            
+            <tr class="subcat">
+                <td colspan="9">▸ Массовые</td>
+            </tr>
+            <tr>
+                <td><strong>PE</strong><br><span class="note-small">(Полиэтилен низкой/высокой плотности (LDPE/HDPE))</span></td>
+                <td class="text-center">Низкий</td>
+                <td class="text-center">Средний</td>
+                <td class="text-center">Огранич.<br><span class="note-small">(матовый)</span></td>
+                <td class="text-center">-50…+80 (LDPE)<br>-50…+110 (HDPE)</td>
+                <td>Хорошая к кислотам/щелочам. <span class="bad-text">Сорбирует консерванты</span></td>
+                <td class="text-center">EtO, γ, e-beam</td>
+                <td class="text-center">Низкая</td>
+                <td>LDPE: низкий O₂-барьер. HDPE: сорбирует консерванты и липофильные АФС</td>
+            </tr>
+            <tr>
+                <td><strong>PP</strong><br><span class="note-small">(Полипропилен)</span></td>
+                <td class="text-center">Низкий</td>
+                <td class="text-center">Высокий</td>
+                <td class="text-center">Огранич.<br><span class="note-small">(полуматовый)</span></td>
+                <td class="text-center">-20…+135</td>
+                <td>Отличная к растворителям. <span class="bad-text">Сорбирует липофильные АФС</span></td>
+                <td class="text-center">Автоклав, EtO, γ</td>
+                <td class="text-center">Низкая</td>
+                <td>Хрупок ниже -20°C. Сорбирует консерванты</td>
+            </tr>
+            <tr>
+                <td><strong>PET</strong><br><span class="note-small">(Полиэтилентерефталат)</span></td>
+                <td class="text-center">Средний</td>
+                <td class="text-center">Хороший</td>
+                <td class="text-center">Да<br><span class="note-small">(высокая)</span></td>
+                <td class="text-center">-40…+70</td>
+                <td>Хорошая. Умеренная сорбция</td>
+                <td class="text-center">EtO, γ</td>
+                <td class="text-center">Средняя</td>
+                <td><span class="bad-text">Не автоклавируется</span> (деформация выше 70°C)</td>
+            </tr>
+            <tr>
+                <td><strong>PVC</strong><br><span class="note-small">(Поливинилхлорид)</span></td>
+                <td class="text-center">Низкий</td>
+                <td class="text-center">Низкий</td>
+                <td class="text-center">Да</td>
+                <td class="text-center">-20…+60</td>
+                <td>Ограниченная. Миграция пластификаторов</td>
+                <td class="text-center">EtO (осторожно)</td>
+                <td class="text-center">Низкая</td>
+                <td><span class="warning">⚠️ Миграция фталатов</span> — теряет актуальность</td>
+            </tr>
+            
+            <tr class="subcat">
+                <td colspan="9">▸ Премиальные</td>
+            </tr>
+            <tr>
+                <td><strong>COC/COP</strong><br><span class="note-small">(Циклоолефины)</span></td>
+                <td class="text-center">Оч. высокий</td>
+                <td class="text-center">Оч. высокий</td>
+                <td class="text-center">Да<br><span class="note-small">(кристально)</span></td>
+                <td class="text-center">-50…+130 (COC)<br>-40…+160 (COP)</td>
+                <td>Исключительная. <span class="accent-green">Мин. сорбция белков</span></td>
+                <td class="text-center">EtO, γ, e-beam</td>
+                <td class="text-center">Оч. высокая</td>
+                <td>Идеален для биотехнологических ЛС</td>
+            </tr>
+            
+            <tr class="subcat">
+                <td colspan="9">▸ Высокобарьерные (многослойные структуры)</td>
+            </tr>
+            <tr>
+                <td><strong>EVOH</strong><br><span class="note-small">(Этиленвиниловый спирт)</span></td>
+                <td class="text-center">Оч. высокий</td>
+                <td class="text-center">Низкий</td>
+                <td class="text-center">Да</td>
+                <td class="text-center">-40…+90</td>
+                <td>Хорошая, гидролиз при высокой влажности</td>
+                <td class="text-center">EtO, γ</td>
+                <td class="text-center">Средняя</td>
+                <td>Теряет барьер при >80% RH. Только средний слой</td>
+            </tr>
+            <tr>
+                <td><strong>PVDC</strong><br><span class="note-small">(Поливинилиденхлорид)</span></td>
+                <td class="text-center">Оч. высокий</td>
+                <td class="text-center">Оч. высокий</td>
+                <td class="text-center">Да<br><span class="note-small">(желтоватый)</span></td>
+                <td class="text-center">-20…+120</td>
+                <td>Отличная</td>
+                <td class="text-center">EtO, γ</td>
+                <td class="text-center">Выше среднего</td>
+                <td>При сжигании HCl и диоксины. Уходит с рынка ЕС</td>
+            </tr>
+            <tr>
+                <td><strong>PCTFE</strong><br><span class="note-small">(Полихлортрифторэтилен)</span></td>
+                <td class="text-center">Оч. высокий</td>
+                <td class="text-center"><strong>Экстремально высокий</strong></td>
+                <td class="text-center">Да</td>
+                <td class="text-center">-200…+150</td>
+                <td>Исключительная, инертен</td>
+                <td class="text-center">Все виды</td>
+                <td class="text-center">Оч. высокая</td>
+                <td>Лучший влагобарьер среди прозрачных полимеров</td>
+            </tr>
+
+            <tr class="cat-prospective">
+                <td colspan="9">2. ПЕРСПЕКТИВНЫЕ ПОЛИМЕРЫ</td>
+            </tr>
+            
+            <tr class="subcat">
+                <td colspan="9">▸ Drop-in биоаналоги</td>
+            </tr>
+            <tr>
+                <td><strong>Bio-PE</strong><br><span class="note-small">(Биополиэтилен)</span></td>
+                <td class="text-center">Как у PE</td>
+                <td class="text-center">Как у PE</td>
+                <td class="text-center">Как у PE</td>
+                <td class="text-center">Как у PE</td>
+                <td>Как у PE</td>
+                <td class="text-center">Как у PE</td>
+                <td class="text-center">Низкая /<br>Ниже среднего</td>
+                <td>Не биодеградируем. Химически идентичен нефтяному PE</td>
+            </tr>
+            <tr>
+                <td><strong>Bio-PET</strong><br><span class="note-small">(Биополиэтилентерефталат)</span></td>
+                <td class="text-center">Как у PET</td>
+                <td class="text-center">Как у PET</td>
+                <td class="text-center">Как у PET</td>
+                <td class="text-center">Как у PET</td>
+                <td>Как у PET</td>
+                <td class="text-center">Как у PET</td>
+                <td class="text-center">Средняя /<br>Выше среднего</td>
+                <td>Не биодеградируем. Требует отдельной переработки</td>
+            </tr>
+            
+            <tr class="subcat">
+                <td colspan="9">▸ Биодеградируемые (компостируемые)</td>
+            </tr>
+            <tr>
+                <td><strong>PLA</strong><br><span class="note-small">(Полимолочная кислота)</span></td>
+                <td class="text-center">Средний</td>
+                <td class="text-center">Низкий</td>
+                <td class="text-center">Да</td>
+                <td class="text-center">+4…+50</td>
+                <td>Гидролизуется во влажной среде</td>
+                <td class="text-center"><span class="bad-text">Не рек.</span></td>
+                <td class="text-center">Средняя</td>
+                <td><span class="warning">⚠️ НЕ для первичной упаковки ЛС!</span></td>
+            </tr>
+            <tr>
+                <td><strong>PHA</strong><br><span class="note-small">(Полигидроксиалканоаты)</span></td>
+                <td class="text-center">Средний / Хороший</td>
+                <td class="text-center">Средний</td>
+                <td class="text-center">Огранич.</td>
+                <td class="text-center">-10…+60</td>
+                <td>Умеренная, подвержен гидролизу</td>
+                <td class="text-center">Ограниченно</td>
+                <td class="text-center">Оч. высокая</td>
+                <td><span class="warning">⚠️ НЕ для первичной упаковки ЛС.</span></td>
+            </tr>
+            <tr>
+                <td><strong>PBAT</strong><br><span class="note-small">(Полибутиленадипат-<br>терефталат)</span></td>
+                <td class="text-center">Низкий</td>
+                <td class="text-center">Низкий</td>
+                <td class="text-center">Огранич.</td>
+                <td class="text-center">-30…+60</td>
+                <td>Умеренная</td>
+                <td class="text-center">Не рек.</td>
+                <td class="text-center">Средняя</td>
+                <td><span class="warning">⚠️ НЕ для первичной упаковки.</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footnote">
+        * Сравнительная таблица по данным фармакопейных статей и документации производителей (2026). EtO — этиленоксид, γ — гамма-излучение, e-beam — электронный пучок.
+    </div>
+</div>
+</body>
+</html>
